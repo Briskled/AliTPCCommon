@@ -23,10 +23,11 @@
 #include "Rtypes.h"
 #include "TString.h"
 #include "AliTPCTransform.h"
+#include "TPCFastTransform.h"
+#include "TPCFastTransformSRS.h"
 
 namespace ali_tpc_common {
 namespace tpc_fast_transformation {
-class TPCFastTransform;
 
 ///
 /// The TPCFastTransformManager class is to initialize TPCFastTransformation object
@@ -52,10 +53,14 @@ class TPCFastTransformManager
   /// _______________  Main functionality  ________________________
 
   /// Initializes TPCFastTransform object
-  int  create( TPCFastTransform &spline, AliTPCTransform *transform, Long_t TimeStamp );
+  int create( TPCFastTransform &spline, AliTPCTransform *transform, Long_t TimeStamp );
+
+  int createSRS( TPCFastTransformSRS &spline, AliTPCTransform *transform, Long_t TimeStamp );
 
   /// Updates the transformation with the new time stamp 
   Int_t updateCalibration( TPCFastTransform &spline, Long_t TimeStamp );
+
+  Int_t updateCalibrationSRS( TPCFastTransformSRS &spline, Long_t TimeStamp );
   
   /// _______________  Utilities   ________________________
 

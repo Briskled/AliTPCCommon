@@ -14,8 +14,8 @@
 /// \author  Sergey Gorbunov <sergey.gorbunov@cern.ch>
 
 
-#ifndef ALICE_ALITPCOMMON_TPCFASTTRANSFORMATION_TPCFASTTRANSFORMQA_H
-#define ALICE_ALITPCOMMON_TPCFASTTRANSFORMATION_TPCFASTTRANSFORMQA_H
+#ifndef ALICE_ALITPCOMMON_TPCFASTTRANSFORMATION_TPCFASTTRANSFORMQASRS_H
+#define ALICE_ALITPCOMMON_TPCFASTTRANSFORMATION_TPCFASTTRANSFORMQASRS_H
 
 #include "AliTPCCommonDef.h"
 #include "TPCFastTransformManager.h"
@@ -54,6 +54,8 @@ class TPCFastTransformQA
 
   /// create fast transformation and perform a quality check
   int doQA( Long_t TimeStamp );
+
+  int doQASRS( Long_t TimeStamp );
 
  private:
   
