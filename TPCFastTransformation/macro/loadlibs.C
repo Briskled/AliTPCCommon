@@ -15,5 +15,8 @@ root -l
   gSystem->AddLinkedLibs("$VC_ROOT/lib/libVc.a");
   gROOT->LoadMacro("../IrregularSpline1D.cxx++");
   gROOT->LoadMacro("../IrregularSpline2D3D.cxx++"); 
+  gROOT->LoadMacro("../SemiregularSpline2D3D.cxx++");
+  gROOT->LoadMacro("../RegularSpline1D.cxx++");
+
 }
 
